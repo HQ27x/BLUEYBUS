@@ -14,7 +14,6 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="348dp"
-        android:foregroundTint="#070707"
         android:text="Email"
         android:textColor="#101010"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,7 +26,6 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="20dp"
-        android:drawableTint="#0C0C0C"
         android:text="Nombre de usuario"
         android:textColor="#101010"
         app:layout_constraintEnd_toEndOf="parent"
@@ -65,7 +63,6 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="4dp"
-        android:backgroundTint="#595252"
         android:hint="Introduce tu email"
         android:inputType="textEmailAddress"
         android:textColor="#101010"
@@ -80,6 +77,20 @@
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="4dp"
         android:hint="Introduce tu contraseña"
+        android:inputType="textPassword"
+        android:textColor="#101010"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password_label" />
+
+
+    <EditText
+        android:id="@+id/confirm_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="60dp"
+        android:hint="Confirma tu contraseña"
         android:inputType="textPassword"
         android:textColor="#101010"
         app:layout_constraintEnd_toEndOf="parent"
@@ -101,13 +112,25 @@
         android:layout_width="280dp"
         android:layout_height="50dp"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="8dp"
-        android:text="Registrarse"
+        android:layout_marginTop="68dp"
         android:backgroundTint="#0A1C39"
+        android:text="Registrarse"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/password" />
+
+    <TextView
+        android:id="@+id/error_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:textColor="#FF0000"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signup_button" />
 
     <ImageView
         android:id="@+id/imageView5"
