@@ -1,123 +1,101 @@
 package com.blueybus.blueybus;
 
-import android.os.Bundle;
-import android.util.Log;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
+
 
 public class SingUP extends AppCompatActivity {
-
-    private static final String TAG = "SingUP";
-    private FirebaseAuth mAuth;
-    private EditText emailEditText;
-    private EditText passwordEditText;
-    private EditText confirmPasswordEditText;
-    private Button signupButton;
-    private TextView errorMessageTextView;
+    Button btn_register;
+    EditText name, email, password;
+    FirebaseFirestore mFirestore;
+    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sing_up);
+        this.setTitle("Registro");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        // Initialize Firebase Auth
+        mFirestore = FirebaseFirestore.getInstance();
         mAuth = FirebaseAuth.getInstance();
 
-        // Initialize UI elements
-        emailEditText = findViewById(R.id.email);
-        passwordEditText = findViewById(R.id.password);
-        confirmPasswordEditText = findViewById(R.id.confirm_password);
-        signupButton = findViewById(R.id.signup_button);
-        errorMessageTextView = findViewById(R.id.error_message);
+        name = findViewById(R.id.nombre);
+        email = findViewById(R.id.correo);
+        password = findViewById(R.id.contrasena);
+        btn_register = findViewById(R.id.btn_registro);
 
-        // Set onClickListener for signup button
-        signupButton.setOnClickListener(view -> createAccount(emailEditText.getText().toString(), passwordEditText.getText().toString()));
+        btn_register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String nameUser = name.getText().toString().trim();
+                String emailUser = email.getText().toString().trim();
+                String passUser = password.getText().toString().trim();
 
-        // Apply window insets
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+                if (nameUser.isEmpty() && emailUser.isEmpty() && passUser.isEmpty()){
+                    Toast.makeText(SingUP.this, "Complete los datos", Toast.LENGTH_SHORT).show();
+                }else{
+                    registerUser(nameUser, emailUser, passUser);
+                }
+            }
         });
     }
 
-    private void createAccount(String email, String password) {
-        if (!validateForm()) {
-            return;
-        }
+    private void registerUser(String nameUser, String emailUser, String passUser) {
+        mAuth.createUserWithEmailAndPassword(emailUser, passUser).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                String id = mAuth.getCurrentUser().getUid();
+                Map<String, Object> map = new HashMap<>();
+                map.put("id", id);
+                map.put("name", nameUser);
+                map.put("email", emailUser);
+                map.put("password", passUser);
 
-        // Create user with email and password
-        mAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                mFirestore.collection("user").document(id).set(map).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // Sign in success
-                            Log.d(TAG, "createUserWithEmail:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            updateUI(user);
-                        } else {
-                            // If sign in fails, display a message to the user
-                            Log.w(TAG, "createUserWithEmail:failure", task.getException());
-                            errorMessageTextView.setText("Falla de autenticación (TwT): " + task.getException().getMessage());
-                            errorMessageTextView.setVisibility(View.VISIBLE);
-                            updateUI(null);
-                        }
+                    public void onSuccess(Void unused) {
+                        finish();
+                        startActivity(new Intent(SingUP.this, MainActivity.class));
+                        Toast.makeText(SingUP.this, "Usuario registrado con éxito", Toast.LENGTH_SHORT).show();
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(SingUP.this, "Error al guardar", Toast.LENGTH_SHORT).show();
                     }
                 });
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(SingUP.this, "Error al registrar", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
-    private boolean validateForm() {
-        boolean valid = true;
-
-        String email = emailEditText.getText().toString();
-        if (email.isEmpty()) {
-            emailEditText.setError("Requerido.");
-            valid = false;
-        } else {
-            emailEditText.setError(null);
-        }
-
-        String password = passwordEditText.getText().toString();
-        if (password.isEmpty()) {
-            passwordEditText.setError("Requerido.");
-            valid = false;
-        } else {
-            passwordEditText.setError(null);
-        }
-
-        String confirmPassword = confirmPasswordEditText.getText().toString();
-        if (!password.equals(confirmPassword)) {
-            confirmPasswordEditText.setError("Confirma contraseña.");
-            valid = false;
-        } else {
-            confirmPasswordEditText.setError(null);
-        }
-
-        return valid;
-    }
-
-    private void updateUI(FirebaseUser user) {
-        if (user != null) {
-            // Redirect to another activity or show a success message
-            errorMessageTextView.setText("Registrado correctamente");
-            errorMessageTextView.setVisibility(View.VISIBLE);
-        } else {
-            // Clear the form or show an error message
-        }
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return false;
     }
 }

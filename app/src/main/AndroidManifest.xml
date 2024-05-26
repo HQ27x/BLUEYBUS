@@ -15,6 +15,9 @@
         android:theme="@style/Theme.BLUEYBUS"
         tools:targetApi="31">
         <activity
+            android:name=".Registrar"
+            android:exported="false" />
+        <activity
             android:name=".MenuCD"
             android:exported="false" />
         <activity
