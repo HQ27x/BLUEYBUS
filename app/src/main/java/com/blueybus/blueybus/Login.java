@@ -28,7 +28,7 @@ public class Login extends AppCompatActivity {
         startActivity(miIntent1);
     }
     public void singgg (View vista){
-        Intent miIntent2 = new Intent(this, SingUP.class);
+        Intent miIntent2 = new Intent(this, Registrar.class);
         startActivity(miIntent2);
     }
 }

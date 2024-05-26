@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D2DBF1"
+    tools:context=".Registrar">
+
+  <EditText
+      android:id="@+id/emailEditText"
+      android:layout_width="368dp"
+      android:layout_height="0dp"
+      android:layout_marginTop="471dp"
+      android:layout_marginBottom="33dp"
+      android:textColor="#101010"
+      android:hint="Correo"
+      app:layout_constraintBottom_toTopOf="@+id/passwordEditText"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.488"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <EditText
+      android:id="@+id/passwordEditText"
+      android:layout_width="361dp"
+      android:layout_height="0dp"
+      android:layout_marginBottom="51dp"
+      android:textColor="#101010"
+      android:hint="Contraseña"
+      android:inputType="textPassword"
+      app:layout_constraintBottom_toTopOf="@+id/registerButton"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/emailEditText" />
+
+  <Button
+      android:id="@+id/registerButton"
+      android:layout_width="270dp"
+      android:layout_height="57dp"
+      android:layout_marginBottom="30dp"
+      android:text="Registrarse"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.442"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/passwordEditText" />
+
+  <ImageView
+      android:id="@+id/imageView9"
+      android:layout_width="289dp"
+      android:layout_height="191dp"
+      android:layout_marginTop="28dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.508"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:srcCompat="@drawable/bbussslog" />
+
+  <ImageView
+      android:id="@+id/imageView10"
+      android:layout_width="192dp"
+      android:layout_height="271dp"
+      android:layout_marginTop="156dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.497"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:srcCompat="@drawable/tramps" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
