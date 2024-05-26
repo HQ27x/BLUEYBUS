@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "460844608699",
+    "project_id": "db-blueybus",
+    "storage_bucket": "db-blueybus.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:460844608699:android:dcc5096dee9a109c758d9e",
+        "android_client_info": {
+          "package_name": "com.blueybus.blueybus"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnix7eJ1JgpfVUelCKf_U_jsjkMTYEVBg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

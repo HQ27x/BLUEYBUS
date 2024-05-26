@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D2DBF1"
+    tools:context=".Rutas">
+
+    <!-- Título de Rutas -->
+    <TextView
+        android:id="@+id/title_rutas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Rutas"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/map_view" />
+
+    <!-- Mapa de Lima, Perú -->
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/map_view"
+        android:layout_width="286dp"
+        android:layout_height="507dp"
+        app:layout_constraintBottom_toTopOf="@id/bus_routes_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_rutas" />
+
+    <!-- Recuadro con las rutas de los buses -->
+    <TextView
+        android:id="@+id/bus_routes_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Rutas de los buses:\nA: Ruta del bus A\n87: Ruta del bus 87"
+        android:padding="16dp"
+        android:background="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/map_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
