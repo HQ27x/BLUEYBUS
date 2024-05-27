@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D2DBF1"
+    tools:context=".Menuuser">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="361dp"
+        android:layout_height="178dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/fredoka_one"
+        android:gravity="center"
+        android:scrollbarStyle="outsideInset"
+        android:shadowColor="@color/black"
+        android:text="@string/men_principal"
+        android:textColor="#0A1C39"
+        android:textDirection="anyRtl"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="252dp"
+        android:backgroundTint="#2F3E66"
+        android:fontFamily="@font/didact_gothic"
+        android:text="@string/buses"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="340dp"
+        android:backgroundTint="#2F3E66"
+        android:fontFamily="@font/didact_gothic"
+        android:text="@string/rutas"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="420dp"
+        android:backgroundTint="#2F3E66"
+        android:fontFamily="@font/didact_gothic"
+        android:text="@string/pagar_qr"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="220dp"
+        android:layout_height="59dp"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="640dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.083"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:layout_marginStart="35dp"
+            android:background="@drawable/baseline_logout_24"
+            android:text="@string/cer"
+            android:textColor="#A20A17" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:layout_marginStart="13dp"
+            android:fontFamily="@font/didact_gothic"
+            android:text="@string/cerrar_sesion"
+            android:textColor="#A20A17"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="152dp"
+        android:layout_height="59dp"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="640dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.938"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="start|center_vertical"
+            android:layout_marginStart="17dp"
+            android:background="@drawable/baseline_delete_forever_24"
+            android:text="@string/eli"
+            android:textColor="#A20A17" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="63dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:layout_marginStart="13dp"
+            android:layout_marginEnd="35dp"
+            android:fontFamily="@font/didact_gothic"
+            android:text="@string/eliminar_cuenta"
+            android:textColor="#A20A17"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="508dp"
+        android:backgroundTint="#2F3E66"
+        android:fontFamily="@font/didact_gothic"
+        android:text="@string/asistente_virtual"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

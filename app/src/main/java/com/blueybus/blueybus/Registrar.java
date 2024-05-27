@@ -1,4 +1,6 @@
 package com.blueybus.blueybus;
+
+import android.content.Intent;  // Import necesario para las Intents
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -44,16 +46,19 @@ public class Registrar extends AppCompatActivity {
                 mAuth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(Registrar.this, task -> {
                             if (task.isSuccessful()) {
-                                // Registration success
+                                // Registro exitoso
                                 FirebaseUser user = mAuth.getCurrentUser();
                                 Toast.makeText(Registrar.this, "REGISTRO COMPLETO :D", Toast.LENGTH_SHORT).show();
-                                // Proceed to next activity or update UI
+                                // Ir a la actividad FLRegistro
+                                Intent intent = new Intent(Registrar.this, FLRegistro.class);
+                                startActivity(intent);
+                                finish(); // Opcional: Llama a finish() para cerrar la actividad actual
                             } else {
-                                // If registration fails
+                                // Si el registro falla
                                 if (task.getException() instanceof FirebaseAuthWeakPasswordException) {
-                                    Toast.makeText(Registrar.this, "Contraseña debil", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(Registrar.this, "Contraseña débil", Toast.LENGTH_SHORT).show();
                                 } else if (task.getException() instanceof FirebaseAuthInvalidCredentialsException) {
-                                    Toast.makeText(Registrar.this, "Correo invalido", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(Registrar.this, "Correo inválido", Toast.LENGTH_SHORT).show();
                                 } else if (task.getException() instanceof FirebaseAuthUserCollisionException) {
                                     Toast.makeText(Registrar.this, "Usuario existente", Toast.LENGTH_SHORT).show();
                                 } else {

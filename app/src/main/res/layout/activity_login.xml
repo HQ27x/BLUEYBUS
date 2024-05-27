@@ -10,9 +10,6 @@
     tools:context=".Login">
 
     <!-- Title -->
-
-    <!-- Username input -->
-
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
@@ -23,46 +20,48 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Username input -->
+
+    <TextView
+        android:id="@+id/info_label"
+        android:layout_width="274dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="244dp"
+        android:text="Un viaje seguro es un viaje tranquilo"
+        android:textColor="#101010"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
 
     <TextView
         android:id="@+id/username_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="336dp"
-        android:text="Usuario"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title" />
-
-    <TextView
-        android:id="@+id/info_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="40dp"
+        android:text="Correo"
         android:textColor="#101010"
-        android:text="Un viaje seguro es un viaje tranquilo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title" />
+        app:layout_constraintTop_toBottomOf="@id/info_label" />
 
     <EditText
-        android:id="@+id/nombre"
-        android:layout_width="match_parent"
+        android:id="@+id/emailEditText"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        android:hint="Ingrese su usuario"
+        android:hint="Ingrese su correo"
         android:textColor="#101010"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/username_label" />
 
     <!-- Password input -->
-
     <TextView
         android:id="@+id/password_label"
         android:layout_width="wrap_content"
@@ -72,11 +71,11 @@
         android:text="Contraseña"
         android:textColor="#101010"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/nombre" />
+        app:layout_constraintTop_toBottomOf="@id/emailEditText" />
 
     <EditText
-        android:id="@+id/contrasena"
-        android:layout_width="match_parent"
+        android:id="@+id/passwordEditText"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
@@ -90,48 +89,50 @@
 
     <!-- Login button -->
     <Button
-        android:id="@+id/login_button"
+        android:id="@+id/loginButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:backgroundTint="#0A1C39"
-        android:onClick="menuprinc"
         android:text="Iniciar sesión"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/contrasena" />
+        app:layout_constraintTop_toBottomOf="@id/passwordEditText" />
 
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="390dp"
-        android:layout_height="377dp"
-        app:srcCompat="@drawable/logo"
-        tools:layout_editor_absoluteX="11dp"
-        tools:layout_editor_absoluteY="25dp" />
-
+    <!-- Registration link -->
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="652dp"
+        android:layout_marginTop="16dp"
         android:text="¿No tienes una cuenta?"
         android:textColor="#101010"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/loginButton" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="684dp"
-        android:onClick="singgg"
-        android:text="Registrate aquí"
-        android:textColor="#101010"
+        android:layout_marginTop="8dp"
+        android:onClick="registr"
+        android:text="Regístrate aquí"
+        android:textColor="#0A1C39"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/textView5" />
 
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="279dp"
+        android:layout_height="141dp"
+        android:layout_marginTop="116dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.446"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
 </androidx.constraintlayout.widget.ConstraintLayout>

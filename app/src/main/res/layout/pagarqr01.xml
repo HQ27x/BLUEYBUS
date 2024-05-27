@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#D2DBF1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="start|center_vertical"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/btnatras"
+            android:fontFamily="@font/didact_gothic"
+            android:gravity="center"
+            android:text="@string/icatras"
+            android:textColor="#FDFDFD"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:layout_marginStart="13dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/didact_gothic"
+            android:text="@string/atr_s"
+            android:textColor="#0A1C39"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="161dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/fredoka_one"
+            android:gravity="center"
+            android:scrollbarStyle="outsideInset"
+            android:shadowColor="@color/black"
+            android:text="@string/pagar_qr"
+            android:textColor="#0A1C39"
+            android:textDirection="anyRtl"
+            android:textSize="60sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:layout_margin="3dp"
+            android:background="#2F3E66"
+            android:fontFamily="@font/didact_gothic"
+            android:gravity="center"
+            android:text="@string/paradero"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:layout_margin="3dp"
+            android:background="#2F3E66"
+            android:fontFamily="@font/didact_gothic"
+            android:gravity="center"
+            android:text="@string/destino"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="152dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/checkBox3"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:background="#6072A2"
+                android:backgroundTint="#6072A2"
+                android:focusable="auto"
+                android:fontFamily="@font/didact_gothic"
+                android:text="@string/av_mexico"
+                android:textColor="#FFFFFF" />
+
+            <CheckBox
+                android:id="@+id/checkBox2"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:background="#6072A2"
+                android:backgroundTint="#6072A2"
+                android:focusable="auto"
+                android:fontFamily="@font/didact_gothic"
+                android:text="@string/covida"
+                android:textColor="#FFFFFF" />
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:background="#6072A2"
+                android:backgroundTint="#6072A2"
+                android:focusable="auto"
+                android:fontFamily="@font/didact_gothic"
+                android:text="@string/yanbal"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/checkBox4"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:background="#6072A2"
+                android:backgroundTint="#6072A2"
+                android:focusable="auto"
+                android:fontFamily="@font/didact_gothic"
+                android:text="@string/av_brasil"
+                android:textColor="#FFFFFF" />
+
+            <CheckBox
+                android:id="@+id/checkBox5"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:background="#6072A2"
+                android:backgroundTint="#6072A2"
+                android:focusable="auto"
+                android:fontFamily="@font/didact_gothic"
+                android:text="@string/izaguirre"
+                android:textColor="#FFFFFF" />
+
+            <CheckBox
+                android:id="@+id/checkBox6"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:background="#6072A2"
+                android:backgroundTint="#6072A2"
+                android:focusable="auto"
+                android:fontFamily="@font/didact_gothic"
+                android:text="@string/universitaria"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="178dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="257dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="15dp"
+            android:background="#2F3E66"
+            android:fontFamily="@font/didact_gothic"
+            android:gravity="center"
+            android:text="@string/monto_a_pagar"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="257dp"
+            android:layout_height="48dp"
+            android:layout_margin="5dp"
+            android:background="#6072A2"
+            android:fontFamily="@font/didact_gothic"
+            android:gravity="center"
+            android:text="@string/s_2_50"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/button10"
+            android:layout_width="188dp"
+            android:layout_height="48dp"
+            android:layout_margin="10dp"
+            android:backgroundTint="#0A1C39"
+            android:fontFamily="@font/didact_gothic"
+            android:text="@string/continuar"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center|top"
+        android:gravity="center|top"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="305dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:fontFamily="@font/didact_gothic"
+            android:gravity="center"
+            android:text="@string/no_deseas_usar_el_servicio"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button11"
+            android:layout_width="188dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#A20A17"
+            android:fontFamily="@font/didact_gothic"
+            android:text="@string/regresar"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>
