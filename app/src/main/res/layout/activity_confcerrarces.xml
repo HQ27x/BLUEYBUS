@@ -13,19 +13,23 @@
         android:id="@+id/textView3"
         android:layout_width="222dp"
         android:layout_height="104dp"
+        android:layout_marginTop="508dp"
         android:fontFamily="@font/didact_gothic"
         android:gravity="center"
         android:text="Has cerrado sesión correctamente"
         android:textColor="#000000"
         android:textSize="26sp"
         android:typeface="sans"
-        tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="501dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.534"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="624dp"
         android:backgroundTint="#0A1C39"
         android:fontFamily="@font/didact_gothic"
         android:text="Continuar"
@@ -33,21 +37,27 @@
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="55dp"
-        tools:layout_editor_absoluteY="627dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.218"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="624dp"
         android:backgroundTint="#A20A17"
         android:fontFamily="@font/didact_gothic"
+        android:onClick="salir"
         android:text="Salir"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="255dp"
-        tools:layout_editor_absoluteY="627dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -63,22 +73,28 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="152dp"
         android:fontFamily="@font/fredoka_one"
         android:text="Luego!"
         android:textColor="#0A1C39"
         android:textSize="52sp"
-        tools:layout_editor_absoluteX="156dp"
-        tools:layout_editor_absoluteY="147dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.594"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
         android:fontFamily="@font/fredoka_one"
         android:text="¡Hasta"
         android:textColor="#0A1C39"
         android:textSize="52sp"
-        tools:layout_editor_absoluteX="73dp"
-        tools:layout_editor_absoluteY="76dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.261"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

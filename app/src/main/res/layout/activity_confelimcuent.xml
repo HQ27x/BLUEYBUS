@@ -23,6 +23,7 @@
         android:id="@+id/textView13"
         android:layout_width="281dp"
         android:layout_height="119dp"
+        android:layout_marginTop="68dp"
         android:fontFamily="@font/fredoka_one"
         android:text="Nos apena que te vayas :("
         android:textAlignment="center"
@@ -30,55 +31,69 @@
         android:textColor="#0A1C39"
         android:textSize="40sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="65dp"
-        tools:layout_editor_absoluteY="84dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.569"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView14"
         android:layout_width="348dp"
         android:layout_height="106dp"
+        android:layout_marginTop="188dp"
         android:fontFamily="@font/fredoka_one"
         android:text="¡Esperamos verte muy pronto!"
         android:textAlignment="center"
         android:textColor="#0A1C39"
         android:textSize="40sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="192dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView15"
         android:layout_width="318dp"
         android:layout_height="68dp"
+        android:layout_marginTop="544dp"
         android:fontFamily="@font/didact_gothic"
         android:text="Su cuenta fue eliminada correctamente"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="46dp"
-        tools:layout_editor_absoluteY="536dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.602"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="628dp"
         android:backgroundTint="#0A1C39"
         android:fontFamily="@font/didact_gothic"
         android:text="Continuar"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="56dp"
-        tools:layout_editor_absoluteY="626dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.149"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="624dp"
         android:backgroundTint="#A20A17"
         android:fontFamily="@font/didact_gothic"
         android:text="Salir"
         android:textAlignment="center"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="259dp"
-        tools:layout_editor_absoluteY="626dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.765"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

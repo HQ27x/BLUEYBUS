@@ -9,30 +9,35 @@
     tools:context=".cerrarces">
 
 
-
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
         android:fontFamily="@font/fredoka_one"
         android:text="¿Cerrar"
         android:textColor="#0A1C39"
         android:textSize="52sp"
-        tools:layout_editor_absoluteX="55dp"
-        tools:layout_editor_absoluteY="83dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.214"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="222dp"
         android:layout_height="104dp"
+        android:layout_marginTop="516dp"
         android:fontFamily="@font/didact_gothic"
         android:gravity="center"
         android:text="¿Desea cerrar sesiòn?"
         android:textColor="#000000"
         android:textSize="26sp"
         android:typeface="sans"
-        tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="501dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -48,19 +53,24 @@
         android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="636dp"
         android:backgroundTint="#A20A17"
         android:fontFamily="@font/didact_gothic"
+        android:onClick="yessalir"
         android:text="Si"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="229dp"
-        tools:layout_editor_absoluteY="636dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.758"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="636dp"
         android:backgroundTint="#0A1C39"
         android:fontFamily="@font/didact_gothic"
         android:text="No"
@@ -68,17 +78,22 @@
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="102dp"
-        tools:layout_editor_absoluteY="636dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.294"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="164dp"
         android:fontFamily="@font/fredoka_one"
         android:text="Sesión?"
         android:textColor="#0A1C39"
         android:textSize="52sp"
-        tools:layout_editor_absoluteX="144dp"
-        tools:layout_editor_absoluteY="163dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.702"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
