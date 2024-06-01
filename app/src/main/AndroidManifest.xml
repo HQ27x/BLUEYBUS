@@ -15,6 +15,18 @@
         android:theme="@style/Theme.BLUEYBUS"
         tools:targetApi="31">
         <activity
+            android:name=".cerrarces"
+            android:exported="false" />
+        <activity
+            android:name=".confcerrarces"
+            android:exported="false" />
+        <activity
+            android:name=".confelimcuent"
+            android:exported="false" />
+        <activity
+            android:name=".elimcuent"
+            android:exported="false" />
+        <activity
             android:name=".Menuuser"
             android:exported="false" />
         <activity

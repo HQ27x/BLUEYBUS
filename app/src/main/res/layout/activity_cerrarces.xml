@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="#D2DBF1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".cerrarces">
+
+
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/fredoka_one"
+        android:text="¿Cerrar"
+        android:textColor="#0A1C39"
+        android:textSize="52sp"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="83dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="222dp"
+        android:layout_height="104dp"
+        android:fontFamily="@font/didact_gothic"
+        android:gravity="center"
+        android:text="¿Desea cerrar sesiòn?"
+        android:textColor="#000000"
+        android:textSize="26sp"
+        android:typeface="sans"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="501dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="317dp"
+        android:layout_height="261dp"
+        android:layout_marginTop="240dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tramps" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#A20A17"
+        android:fontFamily="@font/didact_gothic"
+        android:text="Si"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="229dp"
+        tools:layout_editor_absoluteY="636dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#0A1C39"
+        android:fontFamily="@font/didact_gothic"
+        android:text="No"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="102dp"
+        tools:layout_editor_absoluteY="636dp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/fredoka_one"
+        android:text="Sesión?"
+        android:textColor="#0A1C39"
+        android:textSize="52sp"
+        tools:layout_editor_absoluteX="144dp"
+        tools:layout_editor_absoluteY="163dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

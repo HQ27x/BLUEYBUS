@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="#D2DBF1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".elimcuent">
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="40dp"
+        android:layout_height="57dp"
+
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="58dp"
+        android:layout_height="33dp"
+        android:fontFamily="@font/didact_gothic"
+        android:text="Atrás"
+        android:textColor="#0A1C39"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="32dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="177dp"
+        android:layout_height="156dp"
+        android:layout_marginTop="272dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tramps" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="334dp"
+        android:layout_height="158dp"
+        android:fontFamily="@font/fredoka_one"
+        android:text="¿Desea continuar con la eliminación de la cuenta?"
+        android:textAlignment="center"
+        android:textColor="#0A1C39"
+        android:textColorLink=" #0A1C39"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="130dp" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="263dp"
+        android:layout_height="81dp"
+        android:fontFamily="@font/didact_gothic"
+        android:text="Al confirmar la eliminación de su cuenta, su usuario, progreso y todos sus datos se perderán para siempre."
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="74dp"
+        tools:layout_editor_absoluteY="435dp" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/didact_gothic"
+        android:text="¿Desea continuar?"
+        android:textSize="29sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="90dp"
+        tools:layout_editor_absoluteY="525dp" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="217dp"
+        android:layout_height="52dp"
+        android:backgroundTint="#0A1C39"
+        android:fontFamily="@font/didact_gothic"
+        android:text="Cancelar"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="97dp"
+        tools:layout_editor_absoluteY="636dp" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="217dp"
+        android:layout_height="52dp"
+        android:backgroundTint="#A20A17"
+        android:fontFamily="@font/didact_gothic"
+        android:text="Eliminar cuenta"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="97dp"
+        tools:layout_editor_absoluteY="578dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
